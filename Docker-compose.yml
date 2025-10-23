@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  gym_api:
+    build: .
+    container_name: gym_microservice
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_ENV=development
